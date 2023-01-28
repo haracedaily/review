@@ -29,18 +29,22 @@ public class review {
 		long var6 = 301.3; */
 		short var1 = 128;
 		char var2 = 'B';
-		String var3="44032";
+		char var3=44032;
 		Long var4 = 100000000000L;
 		double var5 = 43.93106;
 		float var6 = 301.3f;
 		
-		System.out.printf(var1+"short");
-		System.out.printf(var2+"char");
-		System.out.printf(var3+"String");
-		System.out.printf(var4+"Long");
-		System.out.printf(var5+"double");
-		System.out.printf(var6+"float");
+		System.out.printf("%d, short\n",var1);
+		System.out.printf("%s, char\n",var2);
+		System.out.printf("%s, char\n",var3);
+		System.out.printf("%d, Long\n",var4);
+		System.out.printf("%.5f, double\n",var5);
+		System.out.printf("%.1f, float\n",var6);
+		
+		int var3_1=var3;
+		System.out.printf("%s, int\n",var3_1);
 
+		
 		//문제4
 		byte a = 35;
 		byte b = 25;
