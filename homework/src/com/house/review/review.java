@@ -34,15 +34,15 @@ public class review {
 		double var5 = 43.93106;
 		float var6 = 301.3f;
 		
-		System.out.printf("%d, short\n",var1);
-		System.out.printf("%s, char\n",var2);
-		System.out.printf("%s, char\n",var3);
-		System.out.printf("%d, Long\n",var4);
-		System.out.printf("%.5f, double\n",var5);
-		System.out.printf("%.1f, float\n",var6);
+		System.out.printf("%d, %s\n",var1, "short");
+		System.out.printf("%s, %2$s\n",var2, "char");
+		System.out.printf("%s, %2$s\n",var3, "char");
+		System.out.printf("%d, %s\n",var4, "Long");
+		System.out.printf("%.5f, %s\n",var5, "double");
+		System.out.printf("%.1f, %s\n",var6, "float");
 		
 		int var3_1=var3;
-		System.out.printf("%s, int\n",var3_1);
+		System.out.printf("%s, %2$s\n",var3_1, "int");
 
 		
 		//문제4
@@ -76,16 +76,16 @@ public class review {
 		char charValue = 'A';
 		String strValue = "번지";
 		
-		float fValue1=intValue1;
-		float fValue2=intValue2;
-		float fValue3=intValue3;
-		float fValue4=intValue4;
 		
-			System.out.printf("%1$s%2$s%3$.1f\n",charValue,strValue,fValue1);
-			System.out.printf("%1$s%2$s%3$.1f\n",charValue,strValue,fValue2);
-			System.out.printf("%1$s%2$s%3$.1f\n",charValue,strValue,fValue3);
-			System.out.printf("%1$s%2$s%3$.1f\n",charValue,strValue,fValue4);
-			
+		int intresult=intValue1+intValue2;
+		float fValue4=intValue4;
+
+		
+		   	System.out.printf("%1$s%2$d%3$s%4$s%5$.1f\n",charValue,intresult,intValue3,strValue,fValue4);
+
+		  
+			//System.out.printf("%1$s%2$s%3$.1f\n",charValue,strValue,fValue4);
+
 	    /* 추가문제) 아래와 같이 변수 값이 주어질 경우 각 자리의 합을 구해 출력하세요.
 		    예시) 373 일 경우 3 + 7 + 3 = 13 으로 결과는 13입니다.
 		    힌트) 곱하기 연산자 (*), 나누기 연산자( / ) 와 빼기 연산자 ( - ) 를 이용하세요. */
