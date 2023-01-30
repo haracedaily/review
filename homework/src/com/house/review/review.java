@@ -82,7 +82,7 @@ public class review {
 		String Resultpre=String.valueOf(charValue)+(int)(intValue1+intValue2)+intValue3+strValue+(float)intValue4;
 		System.out.println(Resultpre);
 		   	System.out.printf("%1$s%2$d%3$s%4$s%5$.1f\n",charValue,intresult,intValue3,strValue,fValue4);
-
+		   	//valueof 와 toString으로 문자열
 		  
 			//System.out.printf("%1$s%2$s%3$.1f\n",charValue,strValue,fValue4);
 
@@ -91,9 +91,9 @@ public class review {
 		    힌트) 곱하기 연산자 (*), 나누기 연산자( / ) 와 빼기 연산자 ( - ) 를 이용하세요. */
 		int value = 485;
 		int intval=value/100;
-		int intval2=(value-405)/10;
-		int intval3=(value-480);
-		int Intresult=(value/100+(value-405)/10+(value-480));		
+		int intval2=(value/10)%10;
+		int intval3=value%10;
+		int Intresult=(value/100+(value/10)%10+value%10);		
 		System.out.println(value/100+(value-405)/10+(value-480));
 		System.out.printf("%1$d 일 경우 %2$d + %3$d + %4$d = %5$d 으로 결과는 %5$d입니다.",value,intval,intval2,intval3,Intresult);
 	}
