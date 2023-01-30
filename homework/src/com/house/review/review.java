@@ -79,8 +79,8 @@ public class review {
 		
 		int intresult=intValue1+intValue2;
 		float fValue4=intValue4;
-		String Resultpre=String.valueOf(charValue)+(int)(intValue1+intValue2)+intValue3+strValue+(float)intValue4;
-		System.out.println(Resultpre);
+//		String Resultpre=String.valueOf(charValue)+(int)(intValue1+intValue2)+intValue3+strValue+(float)intValue4;
+//		System.out.println(Resultpre);
 		   	System.out.printf("%1$s%2$d%3$s%4$s%5$.1f\n",charValue,intresult,intValue3,strValue,fValue4);
 		   	//valueof 와 toString으로 문자열
 		  
