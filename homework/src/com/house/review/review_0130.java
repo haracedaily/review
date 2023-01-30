@@ -49,14 +49,41 @@ public class review_0130 {
 		// 구현하세요.
 		// 예를 들어, 가위가 주어졌을 때 "이기기 위해선 바위를 내야합니다." 라고 출력하도록 하세요.
 		// 한 단어를 입력받을 경우 Scanner객체의 next() 함수를 사용하면 됩니다.
-		String rps = sc.nextLine();
+		boolean flag=true;
+		while(flag) {
+			System.out.println("가위,바위,보 중에 하나를 입력해주세요");
+			String rps = sc.nextLine();
+		switch(rps) {
+		case "가위":
+			System.out.println("이기기 위해선 바위를 내야합니다.");
+			flag =false;
+			break;
+		case "바위":
+			System.out.println("이기기 위해선 보를 내야합니다.");
+			flag =false;
+			break;
+		case "보":
+			System.out.println("이기기 위해선 가위를 내야합니다.");
+			flag =false;
+			break;
+		default:
+			System.out.println("빈칸 없이 가위,바위,보를 입력해주세요");
+			break;
+			};
+		};
 		
 		// 문제4) 차례대로 m과 n을 입력받아 m단을 n번째까지 출력하도록 하세요.
 		// 예를 들어 2와 3을 입력받았을 경우 아래처럼 출력합니다.
 		// 2 X 1 = 2
 		// 2 X 2 = 4
 		// 2 X 3 = 6
-
+		System.out.println("단의 값을 입력해주세요");
+		int m=Integer.parseInt(sc.nextLine());
+		System.out.println("곱셈할 값을 입력해주세요");
+		int n=Integer.parseInt(sc.nextLine());
+		for(int i=1;i<=n;i++) {
+			System.out.println(m+" X "+i+" = "+(m*i));
+		}
 		//문제5) 호수에서 살고 있는 얼음요정이 곱셈을 공부하기로 했다. 근데 이 요정은 너무 멍청해서 9라는 숫자 이외에는 헷갈려서 잘 쓰지 못한다고 한다. 그래서 사람과는 곱셈방식이 좀 다르다.
 		//(규칙 1)
 
@@ -87,5 +114,66 @@ public class review_0130 {
 		//1*7=9	 2*7=9	 3*7=9 	4*7=9 	5*7=9 	6*7=9 	7*7=49 	8*7=9 	9*7=63 
 		//1*8=9	 2*8=9	 3*8=9 	4*8=9 	5*8=9 	6*8=9 	7*8=9 	8*8=9 	9*8=72 
 		//1*9=9	 2*9=18	 3*9=27 4*9=36 	5*9=45 	6*9=54 	7*9=63 	8*9=72 	9*9=81
+
+			System.out.println("N단을 입력해주세요");
+			int N=Integer.parseInt(sc.nextLine());
+			for(int i=1;i<=N;i++) {
+				for(int j=1;j<=N;j++) {
+					if(i<10&j<10) {
+					if(j==9|i==9|(i*j)%10==9|(i*j)/10==9|(i*j)/100==9) {
+					System.out.print(j+"*"+i+"="+(i*j)+"\t");
+					}else {
+						System.out.print(j+"*"+i+"="+"9\t");
+					}
+					}if(i>=10|j>=10) {
+						if(i<8|j<8) {if(j==9|i==9|(i*j)%10==9|(i*j)/10==9|(i*j)/100==9) {
+							System.out.print(j+"*"+i+"="+(i*j)+"\t");
+							}else {
+								System.out.print(j+"*"+i+"="+"9\t");
+							}
+							}else {
+								if(j==9|i==9|(i*j)%10==9|(i*j)/10==9|(i*j)/100==9) {
+									System.out.print(j+"*"+i+"="+(i*j)+" ");
+									}else {
+										System.out.print(j+"*"+i+"="+"9 ");
+									}
+							}
+							}
+				}
+				System.out.println();
+			}
+//					}else if(i==9) {
+//						System.out.print(j+"*"+i+"="+(i*j)+"\t");
+//					}else if((i*j)%10==9) {
+//						System.out.print(j+"*"+i+"="+(i*j)+"\t");
+//					}else if((i*j)/10==9){
+//						System.out.print(j+"*"+i+"="+(i*j)+"\t");
+//					}else if((i*j)/100==9){
+//						System.out.print(j+"*"+i+"="+(i*j)+"\t");
+			System.out.println("M단을 입력해주세요");
+			int M=Integer.parseInt(sc.nextLine());
+			int dan = 1;
+			int multi = 1;
+			System.out.println("\n==while 구구단==");
+			while (dan <= M) {
+				System.out.print(dan+"단\t");
+				dan++;
+			}
+			System.out.println();
+			
+			while (multi <= M) {
+				dan=1;
+				while (dan <= M) {
+					if(dan==9|multi==9|(dan*multi)%10==9|(dan*multi)/10==9|(dan*multi)/100==9) {
+					System.out.print(dan+"*"+multi+"="+(dan*multi)+"\t");
+					}else{
+					System.out.print(dan+"*"+multi+"="+"9\t");
+					}
+					dan++;
+								  }
+				System.out.print("\n");
+				multi++;
+							    }
+			
 	}
 }
