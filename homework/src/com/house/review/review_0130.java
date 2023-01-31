@@ -33,6 +33,7 @@ public class review_0130 {
 		// 1900년은 100의 배수이고 400의 배수는 아니기 때문에 윤년이 아닙니다.
 		// HiNT : 이중 IF문 사용
 		// 문제출처, 백준(https://www.acmicpc.net/) 2753번 문제
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("연도를 입력하여주세요.");
 		int year=Integer.parseInt(sc.nextLine());
 		if(year%4==0&year%100!=0) {
