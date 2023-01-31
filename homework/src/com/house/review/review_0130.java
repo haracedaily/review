@@ -44,7 +44,7 @@ public class review_0130 {
 			System.out.println("윤년이 아닙니다.");
 		}
 		
-		
+
 		
 		// 문제3) switch문을 이용하여 가위, 바위, 보 중 하나가 주어졌을 때 사용자 어떤 값을 가져야 이길 수 있는 지를 출력하도록
 		// 구현하세요.
@@ -93,7 +93,7 @@ public class review_0130 {
 		//3*4=9
 
 		//13*17=9
-
+		//n*n = n
 		//(규칙 2)
 
 		//곱하는 수나 곱한 결과에 9가 있으면 값을 그대로 출력한다.
@@ -116,33 +116,57 @@ public class review_0130 {
 		//1*8=9	 2*8=9	 3*8=9 	4*8=9 	5*8=9 	6*8=9 	7*8=9 	8*8=9 	9*8=72 
 		//1*9=9	 2*9=18	 3*9=27 4*9=36 	5*9=45 	6*9=54 	7*9=63 	8*9=72 	9*9=81
 
+//			System.out.println("N단을 입력해주세요");
+//			int N=Integer.parseInt(sc.nextLine());
+//			System.out.println("==얼음요정의"+N+N+"단==");
+//			for(int i=1;i<=N;i++) {
+//				for(int j=1;j<=N;j++) {
+//					if(i<10&j<10) {
+//					if(j==9|i==9|(i*j)%10==9|(i*j/10)%10==9|(i*j)/100==9) {
+//					System.out.print(j+" * "+i+" = "+(i*j)+"\t");
+//					}else {
+//						System.out.print(j+" * "+i+" = "+"9\t");
+//					}
+//					}if(i>=10|j>=10) {
+//						if(i<8|j<8) {if(j==9|i==9|(i*j)%10==9|(i*j/10)%10==9|(i*j)/100==9) {
+//							System.out.print(j+" * "+i+" = "+(i*j)+"\t");
+//							}else {
+//								System.out.print(j+" * "+i+" = "+"9\t");
+//							}
+//							}else {
+//								if(j==9|i==9|(i*j)%10==9|(i*j/10)%10==9|(i*j)/100==9) {
+//									System.out.print(j+" * "+i+" = "+(i*j)+"\t");
+//									}else {
+//										System.out.print(j+" * "+i+" = "+"9\t");
+										
+					//10이상인 결과값엔 " "로 주려고 고쳤다가 그냥 "u*u" "u-u"로 고치면서 해결됬는데 그냥 만든 김에 놔둔 계산식
+					//지금와서 추가한다면(i>=10|j>=10&&(i*j)>10)했어도 되지 않았을까..? 싶은 생각도..
+					// %10==9 |(i*j/10)%10==9 이렇게 하는게 더 정밀할듯
+					//간략화 시킨다면 이렇게만 하면 끝 | 길이 맞춰보려다가 너무 길어졌어요..!
+
 			System.out.println("N단을 입력해주세요");
 			int N=Integer.parseInt(sc.nextLine());
-			for(int i=1;i<=N;i++) {
+			System.out.println("==얼음요정의"+N+N+"단==");
+				for(int i=1;i<=N;i++) {
 				for(int j=1;j<=N;j++) {
-					if(i<10&j<10) {
-					if(j==9|i==9|(i*j)%10==9|(i*j)/10==9|(i*j)/100==9) {
-					System.out.print(j+"*"+i+"="+(i*j)+"\t");
+					if(j==9|i==9|(i*j)%10==9|(i*j/10)%10==9|(i*j)/100==9) {
+					System.out.print(j+" * "+i+" = "+(i*j)+"\t");
 					}else {
-						System.out.print(j+"*"+i+"="+"9\t");
+						System.out.print(j+" * "+i+" = "+"9\t");
 					}
-					}if(i>=10|j>=10) {
-						if(i<8|j<8) {if(j==9|i==9|(i*j)%10==9|(i*j)/10==9|(i*j)/100==9) {
-							System.out.print(j+"*"+i+"="+(i*j)+"\t");
-							}else {
-								System.out.print(j+"*"+i+"="+"9\t");
-							}
-							}else {
-								if(j==9|i==9|(i*j)%10==9|(i*j)/10==9|(i*j)/100==9) {
-									System.out.print(j+"*"+i+"="+(i*j)+" ");
-									}else {
-										System.out.print(j+"*"+i+"="+"9 ");
+										
+										
+					//여기서 추가한다면 i와 j의 값도 %10==9|(i or j/10)%10==9 해주면 되지 않을까..?
+					//자리수 표현 -> String.length
+										
+										
 									}
-							}
-							}
-				}
 				System.out.println();
-			}
+						}
+							
+				
+				
+			
 //					}else if(i==9) {
 //						System.out.print(j+"*"+i+"="+(i*j)+"\t");
 //					}else if((i*j)%10==9) {
@@ -151,11 +175,11 @@ public class review_0130 {
 //						System.out.print(j+"*"+i+"="+(i*j)+"\t");
 //					}else if((i*j)/100==9){
 //						System.out.print(j+"*"+i+"="+(i*j)+"\t");
-			System.out.println("M단을 입력해주세요");
+			System.out.println("while문으로 만드는 M단을 입력해주세요");
 			int M=Integer.parseInt(sc.nextLine());
 			int dan = 1;
 			int multi = 1;
-			System.out.println("\n==while 구구단==");
+			System.out.println("\n==while로 만드는 얼음요정의"+M+M+"단==");
 			while (dan <= M) {
 				System.out.print(dan+"단\t");
 				dan++;
@@ -165,14 +189,14 @@ public class review_0130 {
 			while (multi <= M) {
 				dan=1;
 				while (dan <= M) {
-					if(dan==9|multi==9|(dan*multi)%10==9|(dan*multi)/10==9|(dan*multi)/100==9) {
+					if(dan==9|multi==9|(dan*multi)%10==9|(dan*multi/10)%10==9|(dan*multi)/100==9) {
 					System.out.print(dan+"*"+multi+"="+(dan*multi)+"\t");
 					}else{
 					System.out.print(dan+"*"+multi+"="+"9\t");
 					}
 					dan++;
 								  }
-				System.out.print("\n");
+				System.out.println();
 				multi++;
 							    }
 			
