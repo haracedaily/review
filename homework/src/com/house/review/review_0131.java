@@ -61,9 +61,11 @@ public class review_0131 {
 				int[] counter = new int[4];
 				
 				for (int i = 0; i < answer.length; i++) {//인덱스랑 숫자 준것의 연관성 답의 문제는 한줄이면 끝 11개...?변수가 4개..? -0 (-1) (-2) -3 -0 -1 -2 -3
-									}
+					counter[answer[i]-1]++;				}
 				for (int i = 0; i < counter.length; i++) {//4줄을 만들어라인데...
-					
+					for(int j=0; j<counter[i];j++) {
+						System.out.print("*");
+					}
 		
 					System.out.println();
 				}
