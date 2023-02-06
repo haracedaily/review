@@ -12,13 +12,20 @@ public class review_Application_0203 {
 		
 		//문제2
 		
-		Human p2=new StandardWeightInfo("홍길동", 168, 45);
+//		Human p2=new StandardWeightInfo("홍길동", 168, 45);
 		
-		Human p3=new ObesityInfo("박둘이", 168, 90);
+//		Human p3=new ObesityInfo("박둘이", 168, 90);
 		
-		p2.getInformation();
-		p3.getInformation();
-		System.out.println();
+		Human human=null;
+		human = new StandardWeightInfo("글치", 168, 45);
+		human.getInformation();
+		human = new ObesityInfo("끙", 168, 90);
+		human.getInformation();
+		
+		
+//		p2.getInformation();
+//		p3.getInformation();
+//		System.out.println();
 	}
 
 }
