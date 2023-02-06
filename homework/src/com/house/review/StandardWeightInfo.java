@@ -8,9 +8,13 @@ public class StandardWeightInfo extends Human{
 	
 	@Override
 	public void getInformation() {
-		double nrm=(height-100)*0.9;
+//		double nrm=(height-100)*0.9;
 		super.getInformation();
-		System.out.print(", 표준체중 "+((height-100)*0.9)+" 입니다.\n");
+		System.out.print(", 표준체중 "+this.getStandardWeight()+" 입니다.\n");
+	}
+	public double getStandardWeight() {
+		double result=(height-100)*0.9;
+		return result;
 	}
 
 }

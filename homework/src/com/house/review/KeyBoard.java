@@ -11,7 +11,9 @@ public class KeyBoard {
 		this.pay=pay;
 	}
 	//메소드
+	
 	void getInfo() {
+		
 		}
 
 }
