@@ -39,14 +39,14 @@ public class RPGgame implements Keypad{
 	}
 
 	@Override
-	public void changeMode(int mode) {
-		if(mode==0) {
+	public void changeMode() {
+		if(nowmode==HARD_MODE) {
 			System.out.println("Normal mode로 변경합니다.");
-			nowmode=0;
+			nowmode=NORMAL_MODE;
 		}
-		if(mode==1) {
+		else if(nowmode==NORMAL_MODE) {
 			System.out.println("Harde mode로 변경합니다.");
-			nowmode=1;
+			nowmode=HARD_MODE;
 		}
 		
 	}

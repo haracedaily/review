@@ -9,6 +9,7 @@ public class PortableNotebookExam {
 		portableNotebook.changeMode(portableNotebook);
 		portableNotebook.useApp();
 		portableNotebook.searchInternet();
+		
 	}
 
 }

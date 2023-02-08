@@ -40,8 +40,10 @@ public class StringAPIExample {
 //		예시) 
 //		-> 입력 : 1a2b3c4d 5e
 //		-> 출력 : 문자 :5개, 숫자:5개, 공백 : 1개
+		
 		String str3 = "1a2b3c4d 5e";
 		byte[] bit = str3.getBytes();
+		//Keycode[]=str3[];
 		int res = 0;
 		int res1 = 0;
 		int res2 = 0;
@@ -144,5 +146,6 @@ public class StringAPIExample {
 
 		}
 		System.out.println(w);
+		
 	}
 }

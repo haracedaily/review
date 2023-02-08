@@ -47,5 +47,17 @@ public class PortableNotebook implements Tablet, Notebook{
 			System.out.println(this.mode);
 		}
 	}
+//	public void changeMode(PortableNotebook portableNotebook) {
+//		if(this.mode=="TABLET_MODE") {
+//			Notebook notebook= portableNotebook;
+//			this.mode="NOTEBOOK_MODE";
+//			System.out.println(this.mode);
+//		}else if(this.mode=="NOTEBOOK_MODE") {
+//			Tablet tablet= portableNotebook;
+//			this.mode="TABLET_MODE";
+//			System.out.println(this.mode);
+//		}
+//	}
+	
 	
 }

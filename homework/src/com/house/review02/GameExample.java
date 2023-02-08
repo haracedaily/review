@@ -7,11 +7,11 @@ public class GameExample {
 		System.out.println("RPGgame 실행");
 		game.leftUpButton();
 		game.rightUpButton();
-		game.changeMode(1);
+		game.changeMode();
 		game.rightUpButton();
 		game.rightDownButton();
 		game.leftDownButton();
-		game.changeMode(0);
+		game.changeMode();
 		game.rightDownButton();
 		System.out.println("================");
 		game=new ArcadeGame();
@@ -19,7 +19,7 @@ public class GameExample {
 		game.leftUpButton();
 		game.rightUpButton();
 		game.leftDownButton();
-		game.changeMode(1);
+		game.changeMode();
 		game.rightUpButton();
 		game.leftUpButton();
 		game.rightDownButton();
